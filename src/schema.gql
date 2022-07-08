@@ -11,3 +11,12 @@ type PortfolioEntity {
 type Query {
   portfolioEntities: [PortfolioEntity!]!
 }
+
+type Mutation {
+  createPortfolioEntity(createPortfolioEntity: CreatePortfolioEntity!): PortfolioEntity!
+}
+
+input CreatePortfolioEntity {
+  name: String!
+  type: String
+}
